@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      background: url('https://i.imgur.com/8klcmDL.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 50px;
+      color: purple;
+      background: white;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+      background: lightgray;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+        color: purple;
+        background: white;
+      }
+    li {
+        padding: 5px;
+        display: block;
+      }
+    p {
+      background: lightgray;
+    }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.imgur.com/aiYXIUR.jpg"
+      width="200" 
+     height="200"/>
+    <h1>Drew's Writing Portfolio</h1>
+    <ul>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Podcasts</a></li>
+      <li><a href="#">Social Media</a></li>
+    </ul>
+  </header>
+  <article>
+    <h2>4 Things to Know About the Merge</h2>
+    <p>Tl;dr – This month the Ethereum network is going through a massive software update. Ethereum’s economic policy will change, its improved framework will better support future updates, and its electricity consumption will collapse by over 99.95%!</p>
+    <button>Validate My Ego</button>
+  </article>
+  <article>
+    <h2>NFT Security Tips</h2>
+    <p>Tl;dr – We put together some of the most important tips for keeping your crypto assets safe. Stay Zen in the chaos of crypto 🙂</p>
+    <button>Validate My Ego</button>
+  </article>
+  <article>
+    <h2>Decentralized Digital Asset Custody</h2>
+    <p>We’re now familiar with the Odsy tech stack. The network combines multi-chain compatibility, Turing-complete programmability, and MPC-based security to create a single, decentralized access control layer for all of crypto and web3. But what can we do with that?
+
+A lot. The dWallets that are deployable on the network have many real-world use cases which we will be taking a look at. The first of these is Decentralized Digital Asset Custody.</p>
+    <button>Validate My Ego</button>
+  </article>
+  <script>
+    $("button").on("click", function() {
+      alert("My ego is validated!");
+    });
+  </script>
+</body>
