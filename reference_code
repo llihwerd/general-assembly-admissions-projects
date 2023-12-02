@@ -1,0 +1,17 @@
+if (temperature < 60) {
+    if (weather === "raining") {
+        console.log("It's cold and raining. Time for a heavy rain jacket.");
+    } else if (weather === "snowing") {
+        console.log("It's cold and snowing. Get out the parka.");
+    } else {
+        console.log("It's cold and clear. Feels like sweater weather today.");
+    }
+} else {
+    if (weather === "raining") {
+        console.log("It's warm but it's raining. A light windbreaker will do.");
+    } else if (weather === "sunny") {
+        console.log("It's warm and sunny. Tank top it is.");
+    } else {
+        console.log("It's warm and clear. Regular old T-shirt day.");
+    }
+}
