@@ -29,3 +29,39 @@ function negotiate(price){
     console.log("Take off 10% and you've got a deal.")
     // YOUR CODE ABOVE
 }
+
+
+
+for (let i = 0; i < 100; i++) {
+  console.log(i);
+}
+
+
+const cookies = ["chocolate chip", "gingersnap", "oatmeal raisin", "shortbread"];
+for (let i = 0; i < cookies.length; i++) {
+    console.log(cookies[i]);
+}
+
+
+
+const characters = ["Garnet", "Amethyst", "Pearl", "Steven"];
+for (let i = 0; i < characters.length; i++) {
+    console.log(characters[i]);
+}
+
+
+
+let number = 0;
+while (number < 11) {
+    number = number + 1;
+}
+
+
+
+let investment = 1000;
+for (let year = 1; year <= 10; year++) {
+if (year === 7) {
+    investment = investment * 0.25;}
+else {investment = investment * 1.1;}
+console.log("Years: " + year + " Value: " + investment)
+}
