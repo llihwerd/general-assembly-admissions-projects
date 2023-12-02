@@ -75,3 +75,88 @@ while(daysUntilTheFinale > 0){
     daysUntilTheFinale = daysUntilTheFinale - 1;
 }
 console.log("It's finally here!");
+
+
+
+
+
+function sing() {
+    console.log("I'm in my room, it's a typical Tuesday night. I'm listening to the kind of music she doesn't like.")
+}
+sing()
+
+
+
+
+
+function latteTotal() {
+  const price = 4.50;
+  const salesTaxRate = .10;
+  const totalAmount = price + (price * salesTaxRate);
+  console.log("The total is $" + totalAmount);
+}
+
+
+
+
+
+
+
+function calculateTotal(price, salesTaxRate) {
+   const totalAmount = price + (price * salesTaxRate);
+   console.log("The total is $" + totalAmount);
+}
+
+
+
+
+function calculateTotal(price, salesTaxRate) {
+   const totalAmount = price + (price * salesTaxRate);
+   console.log("The total is $" + totalAmount);
+}
+
+calculateTotal(4.50, .10);
+
+
+
+
+
+
+function calculateTotal(price, salesTaxRate) {
+   const totalAmount = price + (price * salesTaxRate);
+   console.log("The total is $" + totalAmount);
+}
+
+calculateTotal(4.50, .10);
+
+
+
+
+
+
+function helloThere(name){
+    console.log("Hello, " + name + "!")
+}
+
+
+
+
+
+
+function multiply(number1, number2){
+    return number1 * number2
+}
+multiply(2, 4);
+
+
+
+
+
+
+
+
+
+
+
+
+
