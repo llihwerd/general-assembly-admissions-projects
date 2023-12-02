@@ -15,3 +15,17 @@ if (temperature < 60) {
         console.log("It's warm and clear. Regular old T-shirt day.");
     }
 }
+
+
+function negotiate(price){
+    
+    // The price variable will be a number
+    // YOUR CODE HERE
+    if (price < 5) {
+        console.log("I'll take it!")
+    } else if (price > 10) {
+        console.log(price + " for this? You must be joking!")
+    } else
+    console.log("Take off 10% and you've got a deal.")
+    // YOUR CODE ABOVE
+}
