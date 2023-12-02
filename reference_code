@@ -65,3 +65,13 @@ if (year === 7) {
 else {investment = investment * 1.1;}
 console.log("Years: " + year + " Value: " + investment)
 }
+
+
+
+
+let daysUntilTheFinale = 30;
+while(daysUntilTheFinale > 0){
+    console.log("Only " + daysUntilTheFinale + " more days!")
+    daysUntilTheFinale = daysUntilTheFinale - 1;
+}
+console.log("It's finally here!");
