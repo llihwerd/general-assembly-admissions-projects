@@ -153,6 +153,16 @@ multiply(2, 4);
 
 
 
+const embraceChange = () => {
+   console.log("Now I'm an arrow function.");
+}
+embraceChange();
+
+
+
+
+
+
 
 
 
