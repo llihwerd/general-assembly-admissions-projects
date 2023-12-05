@@ -174,6 +174,67 @@ function printArray(arr){
 
 
 
+document.addEventListener('DOMContentLoaded', function(event) {
+    // Don't worry about the code above this line!
+    
+    // select the first h1 element
+    const h1 = document.querySelector("h1");
+    console.log(h1.innerText);
+    // select the element with the id of company-name
+    const companyName = document.querySelector("#company-name");
+    console.log(companyName.innerText);
+    // select the element with the class of sales-pitch
+    const salesPitch = document.querySelector(".sales-pitch");
+    console.log(salesPitch.innerText);
+    // select all paragraph tags
+    const allParagraphTags = document.querySelectorAll("p");
+    console.log(allParagraphTags.length);
+    
+ })
+
+
+
+
+
+
+document.querySelector('h1').innerHTML = "Visit my <a href='http://www.coolsite.net'>site</a>";
+
+
+
+
+
+
+const h1ID = document.querySelector('h1').getAttribute('id');
+// This would store the ID attribute of the <h1> in the variable called h1ID.
+
+document.querySelector('#title').setAttribute('class', 'blue');
+// This would give the element with the ID of "title" a class of "blue."
+
+document.querySelectorAll('p').removeAttribute('class');
+// This would remove the class attribute from all <p> elements.
+
+
+
+
+
+
+document.querySelector('h2').setAttribute('class', 'urgent');
+
+
+
+
+
+
+const paragraph = document.createElement('p');
+paragraph.innerText = "Your passwords did not match.";
+paragraph.setAttribute("class", "registration-error");
+
+// This is what's created: <p class="registration-error">Your passwords did not match.</p>
+
+
+
+
+
 
 
 
