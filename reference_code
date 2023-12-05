@@ -236,6 +236,310 @@ paragraph.setAttribute("class", "registration-error");
 
 
 
+//For example, if we had a <div id="posts"> and we wanted to add a new paragraph tag to it, we might do something like this:
+// First, we create the element and store it in a variable named newPost
+const newPost = document.createElement("p");
+// Then, we can set properties such as the innerText
+newPost.innerText = "JavaScript can be tough!";
+// Then, we can grab the parent element that we want to attach our new element to
+const postsDiv = document.querySelector("#posts");
+// Finally, we use the append method to add our newPost inside of the postsDiv
+postsDiv.append(newPost);
+
+
+
+
+
+
+//console.log() the text of the element with the ID of title.
+
+<h1 id="title">Welcome to the DOM</h1>
+<p>Don't feel <span class="blue">blue</span>, here's what to do.</p>
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    // Don't worry about the code above this line!
+    // Write your solution code inside this code block
+    const titleText = document.getElementById("title").innerText;
+    console.log(titleText);
+    
+    
+    // End of solution code
+})   
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    // Don't worry about the code above this line!
+    // Write your solution code inside this code block
+    var firstSpan = document.querySelector('span');
+
+    // Log the class of the first span element
+    console.log(firstSpan.className);
+  
+    
+    // End of solution code
+})  
+
+
+
+
+
+
+//Change the text color in the first element to blue by using the blue class.
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    // Don't worry about the code above this line!
+    // Write your solution code inside this code block
+ const blueSpan = document.querySelector(".blue");
+    blueSpan.style.color = "blue"
+    
+    
+    
+    
+    // End of solution code
+})  
+
+
+
+
+
+
+//Change the text in the h1 with the ID of title to say Come on in!, instead of Welcome to the DOM.
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    // Don't worry about the code above this line!
+    // Write your solution code inside this code block
+     // Select the h1 element with the ID 'title'
+    var titleElement = document.getElementById('title');
+
+    // Change the text content of the h1 element
+    titleElement.textContent = 'Come on in!';
+    
+    
+    
+    
+    // End of solution code
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const choices = ["Lapis", "Papyrus", "Scalpellus"];
+
+const player = {
+    name: 'Player',
+    currentChoice: null
+};
+
+const computer = {
+    name: 'Computer',
+    currentChoice: null
+};
+
+function computerChooses() {
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    computer.currentChoice = choices[randomIndex];
+}
+
+function compareChoices() {
+    if (computer.currentChoice === player.currentChoice) {
+        console.log("It's a tie! Both players chose " + computer.currentChoice);
+    } else if (computer.currentChoice === choices[0]) {
+        if (player.currentChoice === choices[1]) {
+            console.log("You win! You chose " + player.currentChoice + ". The computer chose " + computer.currentChoice + ". Try again!");
+        } else {
+            console.log("You lose! You chose " + player.currentChoice + ". The computer chose " + computer.currentChoice + ". Try again!");
+        }
+    } else if (computer.currentChoice === choices[1]) {
+        if (player.currentChoice === choices[0]) {
+            console.log("You Lose! You chose " + player.currentChoice + ". The computer chose " + computer.currentChoice + ". Try again!");
+        } else {
+            console.log("You win! You chose " + player.currentChoice + ". The computer chose " + computer.currentChoice + ". Try again!");
+        }
+    } else if (computer.currentChoice === choices[2]) {
+        if (player.currentChoice === choices[1]) {
+            console.log("You lose! You chose " + player.currentChoice + ". The computer chose " + computer.currentChoice + ". Try again!");
+        } else {
+            console.log("You win! You chose " + player.currentChoice + ". The computer chose " + computer.currentChoice + ". Try again!");
+        }
+    }
+}
+
+// Test the game
+player.currentChoice = choices[0]; // Change this to test different scenarios
+computerChooses();
+compareChoices();
+
+
+
+
+
+
+Events are user actions that occur on your webpage, such as hovering over an element, clicking a link, or scrolling down a page.
+
+When you add a listener (which is a function) to an event, you get an event listener (also called event handlers). This is how the browser knows to respond to user actions. Your browser “listens” for an event to take place, then responds in whatever way you tell it to.
+
+An event listener begins with on. Here are a few commonly used ones:
+
+onload  // When the page loads.
+onclick  // When a user clicks something.
+onmouseover  // When a user hovers their mouse over something.
+onfocus  // When a user puts the cursor on a form field.
+To tell the browser which element to listen to, we’ll bring back the DOM access method we learned about in the last lesson: querySelector(). (We can only attach an event listener to an individual element, so we wouldn’t use querySelectorAll() here.)
+
+
+
+
+
+
+Take onclick: It refers to an element's event listener, which will be triggered when the element is clicked. The general format looks like this:
+
+elementToGrab.onclick = function() {
+   // Code that should run 
+};
+Let’s say we created a function named respondToLoginAttempt that throws a notification when the login element is clicked. The code snippet would look like this:
+
+document.querySelector('#login').onclick = respondToLoginAttempt;
+In plain English, this is saying, “When the login element is clicked, run the function called respondToLoginAttempt.”
+
+
+
+
+
+
+You can also add event listeners using a method called addEventListener(). Similar to onclick, this method tells elements to wait for something to happen in the browser and then execute a specific function when it does.
+
+For example, forms can wait for a user to submit data and then run validation functions to check the input. Or, buttons can wait for a user to click them and then remove certain elements from the page.
+
+The general format looks like this: elementToGrab().addEventListener(event, callback);. Notice how this method takes two parameters:
+
+The name of the browser event being listened for.
+The callback function to be executed once that event occurs.
+In this simple example, a clicked button will print a message to the console:
+
+function sayHello() {
+    console.log("Hello!");
+}
+document.querySelector('button').addEventListener('click', sayHello);
+
+
+
+
+
+
+When attaching functions as event listeners, you might want that function to use the element that was clicked. Maybe you want to grab the text that was clicked to store or update it.
+
+When defining the function, you can add a parameter, typically called e. This parameter, known as the event object, is passed into the function when it’s triggered. It contains helpful details about the event that triggered the function, including which element triggered the function: e.target.
+
+document.querySelector('#disappearing-button').onclick = function(e) {
+    console.log(e.target);
+    e.target.remove();
+}
+
+
+
+
+
+
+function sayHello(){
+  console.log("hello!");
+}
+document.addEventListener('DOMContentLoaded', function(event) {
+    //insert your answer within this code block
+    
+     // Select the button by its ID
+    var button = document.getElementById('generate-greeting');
+
+    // Add an event listener to the button
+    button.addEventListener('click', sayHello);
+    
+    
+    // end code solution
+})
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    // Select the button by its ID
+    var button = document.getElementById('generate-message');
+
+    // Add an event listener to the button
+    button.addEventListener('click', function() {
+        // Select the input field by its ID
+        var inputField = document.getElementById('message');
+
+        // Log the value of the input field
+        console.log(inputField.value);
+    });
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    // Select the button by its ID
+    var addButton = document.getElementById('generate-todo');
+
+    // Add an event listener to the button
+    addButton.addEventListener('click', function() {
+        // Select the input field by its ID
+        var inputField = document.getElementById('new-todo');
+
+        // Get the value of the input field
+        var todoText = inputField.value;
+
+        // Create a new list item
+        var newListItem = document.createElement('li');
+
+        // Set the text of the new list item
+        newListItem.textContent = todoText;
+
+        // Select the unordered list by its class
+        var todoList = document.querySelector('.todos');
+
+        // Append the new list item to the unordered list
+        todoList.appendChild(newListItem);
+
+        // Clear the input field
+        inputField.value = '';
+    });
+});
+
+
+
+
 
 
 
